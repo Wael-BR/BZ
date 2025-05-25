@@ -44,6 +44,12 @@
             <artifactId>jaxb-runtime</artifactId>
             <version>4.0.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -55,9 +61,8 @@
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <executions>
-                    <!-- Execution 1 -->
                     <execution>
-                        <id>generate-crs-neg</id>
+                        <id>generate-crs-neg-v2-</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -66,16 +71,13 @@
                             <sources>
                                 <source>src/main/resources/CRS-NEG_V2.xsd</source>
                             </sources>
-                            <outputDirectory>${project.build.directory}/generated-sources/jaxb/crsneg</outputDirectory>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.crsneg</packageName>
+                            <packageName>tn.bz.schema.crsnegv2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
-
-                    <!-- Execution 2 -->
                     <execution>
-                        <id>generate-crs-ppr</id>
+                        <id>generate-crs-ppr-v2-</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -84,23 +86,50 @@
                             <sources>
                                 <source>src/main/resources/CRS-PPR_V2.xsd</source>
                             </sources>
-                            <outputDirectory>${project.build.directory}/generated-sources/jaxb/crsppr</outputDirectory>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.crsppr</packageName>
+                            <packageName>tn.bz.schema.crspprv2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
-
-                    <!-- Add more executions as needed -->
+                    <execution>
+                        <id>generate-maj-crs-all-tndcv-v3-</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
+                            </sources>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <packageName>tn.bz.schema.majcrsalltndcvv3</packageName>
+                            <clearOutputDir>false</clearOutputDir>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-maj-crs-att-</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/resources/MAJ_CRS-ATT.xsd</source>
+                            </sources>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <packageName>tn.bz.schema.majcrsatt</packageName>
+                            <clearOutputDir>false</clearOutputDir>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <xjbSources>
                         <xjbSource>src/main/resources/global.xjb</xjbSource>
                     </xjbSources>
                     <sources>
-                        <source>src/main/resources/CRS-NEG_V2.xsd</source>
+                        <!--<source>src/main/resources/CRS-NEG_V2.xsd</source>
                         <source>src/main/resources/CRS-PPR_V2.xsd</source>
-                        <!--<source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
+                        <source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
                         <source>src/main/resources/MAJ_CRS-ATT.xsd</source>-->
                     </sources>
 
@@ -132,6 +161,7 @@
         <profile>
             <id>default</id>
             <build>
+
                 <resources>
                     <resource>
                         <directory>src/main/resources</directory>
@@ -151,13 +181,17 @@
                                 </goals>
                                 <configuration>
                                     <sources>
-                                        <source>${project.build.directory}/generated-sources/jaxb/crsneg</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/crsppr</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/crs-neg-v2-</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/crs-ppr-v2-</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/maj-crs-all-tndcv-v3-</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/maj-crs-att-</source>
                                     </sources>
+
                                 </configuration>
                             </execution>
                         </executions>
                     </plugin>
+
                 </plugins>
             </build>
         </profile>

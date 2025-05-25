@@ -1,0 +1,74 @@
+{
+  "Document" : {
+    "EnteteDoc" : {
+      "CodeIAT" : null,
+      "DateDec" : null,
+      "CodeAnnexe" : null,
+      "PeriodDec" : null
+    },
+    "Extraits" : {
+      "Extraits" : [ {
+        "Entete" : {
+          "AgenceDom" : null,
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : null,
+            "Prenom" : null,
+            "Nationalite" : null,
+            "RaisSociale" : null
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : null,
+            "DateOuvCpte" : null,
+            "EtatCpte" : null,
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : null,
+            "DateAutBCT" : null,
+            "SoldDebMois" : {
+              "Value" : null,
+              "Ccy" : null
+            },
+            "SoldfinMois" : {
+              "Value" : null,
+              "Ccy" : null
+            }
+          },
+          "NbrEcritures" : null
+        },
+        "Details" : {
+          "Details" : [ {
+            "Rib" : null,
+            "RefOperation" : {
+              "NatMvtOp" : null,
+              "MntOpDev" : {
+                "Value" : null,
+                "Ccy" : null
+              },
+              "MntOpDin" : {
+                "Value" : null,
+                "Ccy" : null
+              },
+              "DateMvt" : null,
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : null
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : null,
+              "DateAutBCT" : null
+            },
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : null
+          } ]
+        }
+      } ]
+    }
+  }
+}
