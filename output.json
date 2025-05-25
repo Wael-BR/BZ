@@ -1,0 +1,52 @@
+{
+  "enteteDoc" : null,
+  "extraits" : {
+    "extraits" : [ {
+      "entete" : {
+        "agenceDom" : null,
+        "titulaire" : {
+          "typeTitul" : null,
+          "typeIdentifiant" : null,
+          "codeIdentifiant" : null,
+          "nom" : null,
+          "prenom" : null,
+          "nationalite" : null,
+          "raisSociale" : null
+        },
+        "refCompte" : {
+          "rib" : null,
+          "deviseCpte" : null,
+          "dateOuvCpte" : null,
+          "etatCpte" : null,
+          "dateclotureCpte" : null,
+          "dateGelCpte" : null,
+          "numAutBCT" : null,
+          "dateAutBCT" : null,
+          "soldDebMois" : null,
+          "soldfinMois" : null
+        },
+        "nbrEcritures" : null
+      },
+      "details" : {
+        "details" : [ {
+          "rib" : null,
+          "refOperation" : {
+            "natMvtOp" : null,
+            "mntOpDev" : null,
+            "mntOpDin" : null,
+            "dateMvt" : null,
+            "typeOp" : null,
+            "natOp" : null,
+            "codMvt" : null,
+            "modReg" : null,
+            "numMsgeSwiftMvt" : null
+          },
+          "refAutorisationBct" : null,
+          "nomFourniClient" : null,
+          "denomBenif" : null,
+          "pays" : null
+        } ]
+      }
+    } ]
+  }
+}
