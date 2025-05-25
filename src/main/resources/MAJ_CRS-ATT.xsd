@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:simpleType name="T_Date">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/\d{4}"/>
+
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Devise">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3,3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="T_Mnt_Devise">
+        <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="17"/>
+            <xs:fractionDigits value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:complexType name="T_Montant">
+        <xs:simpleContent>
+            <xs:extension base="T_Mnt_Devise">
+                <xs:attribute name="Ccy" type="Devise" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:element name="Document">
+
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="EnteteDoc">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CodeIAT">
+                                <xs:annotation>
+                                    <xs:documentation source="Name" xml:lang="Fr">Code IAT</xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="DateDec" type="T_Date" minOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation source="Name" xml:lang="Fr">Date de déclaration</xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="CodeAnnexe">
+                                <xs:annotation>
+                                    <xs:documentation source="Name" xml:lang="Fr">Code Annexe</xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[A-Z]{3}-[0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="PeriodDec" minOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation source="Name" xml:lang="Fr">Mois de la déclaration de ce reporting</xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="(0[1-9]|1[0-2])[0-9]{4}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Extraits">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Extrait" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Entete">
+                                            <xs:complexType>
+                                                <xs:sequence>
+
+                                                  <xs:element name="AgenceDom" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Agence auprès de laquelle est domiciliée la convention d’emprunt extérieur</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:pattern value="\d{3}"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="Titulaire" minOccurs="1">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="TypeTitul" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Type titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:integer">
+                                                   <xs:pattern value="[1-2]"/>
+                                                  <xs:enumeration value="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation>1 = personne morale</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="2">
+                                                  <xs:annotation>
+                                                  <xs:documentation>2 = personne physique</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="TypeIdentifiant" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr"> Type de l'identifiant du beneficiaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="S">
+                                                  <xs:annotation>
+                                                  <xs:documentation>S = Carte de séjour</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="P">
+                                                  <xs:annotation>
+                                                  <xs:documentation>P = passeport</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="D">
+                                                  <xs:annotation>
+                                                  <xs:documentation> D = matricule fiscal</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="E">
+                                                  <xs:annotation>
+                                                  <xs:documentation> E = Identifiant étranger</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="CodeIdentifiant" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Numero identifiant du titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="15"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="Nom" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Nom du titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="30"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+
+                                                  </xs:element>
+                                                  <xs:element name="Prenom" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Prenom du titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="30"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+
+                                                  </xs:element>
+                                                  <xs:element name="RaisSociale" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Raison sociale du titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="80"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+
+                                                  </xs:element>
+                                                  <xs:element name="Nationalite" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Nationalité du titulaire du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="3"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="RefCompte">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="Rib" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Rib du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="20"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="DateOuvCpte" type="T_Date"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Date d’ouverture du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+                                                  <xs:element name="EtatCpte" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Etat du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:integer">
+                                                  <xs:pattern value="[1-3]"/>
+                                                  <xs:enumeration value="1">
+
+                                                  <xs:annotation>
+                                                  <xs:documentation>1 = actif</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="2">
+                                                  <xs:annotation>
+                                                  <xs:documentation>2 = cloturé</xs:documentation>
+                                                  </xs:annotation>
+
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="3">
+                                                  <xs:annotation>
+                                                  <xs:documentation>3 = gelé</xs:documentation>
+                                                  </xs:annotation>
+
+                                                  </xs:enumeration>
+
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="DateclotureCpte" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Date de clôture du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="T_Date"> </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="DateGelCpte" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Date de gel du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="T_Date"> </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="SoldDebMois" type="T_Montant"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">le solde début du mois </xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+                                                  <xs:element name="SoldfinMois" type="T_Montant"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">le solde fin du mois </xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="NbrEcritures" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Nombre des opérations enregistrées pour le mois objet de declaration</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:pattern value="\d{6}"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Details" maxOccurs="1" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Detail" maxOccurs="unbounded">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="Rib" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Rib du compte</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="20"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="RefOperation" minOccurs="1">
+
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+
+                                                  <xs:element name="NatMvtOp" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Nature du mouvement</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:enumeration value="C">
+
+                                                  <xs:annotation>
+                                                  <xs:documentation>C= mouvement au crédit</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="D">
+                                                  <xs:annotation>
+                                                  <xs:documentation>D= mouvement au débit</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="CodMvt" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">code spécifique du mouvement</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:pattern value="\d{2}"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="DateMvt" type="T_Date"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Date du mouvement </xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+                                                  <xs:element name="NatOp" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Nature de l’opération selon balance des paiements</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:pattern value="\d{4}"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+
+                                                  </xs:element>
+                                                  <xs:element name="MntOpDev" type="T_Montant"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Montant de l’opération en devises</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+
+                                                  <xs:element name="MntOpDin" type="T_Montant"
+                                                  minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">la CV en TND du montant de l’opération</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:element>
+
+
+                                                  <xs:element name="ModReg">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Mode de paiement</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:integer">
+                                                  <xs:pattern value="[1-4]"/>
+                                                  <xs:enumeration value="1">
+
+                                                  <xs:annotation>
+                                                  <xs:documentation>1=virement</xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="2">
+                                                  <xs:annotation>
+                                                  <xs:documentation>2=espéces</xs:documentation>
+                                                  </xs:annotation>
+
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="3">
+
+                                                  <xs:annotation>
+                                                  <xs:documentation>3= chèque </xs:documentation>
+                                                  </xs:annotation>
+                                                  </xs:enumeration>
+                                                  <xs:enumeration value="4">
+                                                  <xs:annotation>
+                                                  <xs:documentation>4= Carte de paiement international</xs:documentation>
+                                                  </xs:annotation>
+
+                                                  </xs:enumeration>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="NumMsgeSwiftMvt" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Numéro message swift du mouvement</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="15"/>
+                                                  </xs:restriction>
+
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="RefAutorisationBct">
+                                                  <xs:complexType>
+                                                  <xs:sequence>
+                                                  <xs:element name="NumAutBCT" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Numéro de l’autorisation de la BCT</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                   <xs:restriction base="xs:string">
+                                                   <xs:maxLength value="16"/>
+                                                   <xs:pattern value="[0-9]{1,16}"/>
+                                                   </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="DateAutBCT" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Date de l’autorisation de la BCT</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="T_Date"> </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+
+                                                  </xs:element>
+                                                  <xs:element name="DenomBenif" minOccurs="1">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Indiquer la Dénomination du bénéficiaire</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:maxLength value="80"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  <xs:element name="Pays" minOccurs="0">
+                                                  <xs:annotation>
+                                                  <xs:documentation source="Name" xml:lang="Fr">Pays</xs:documentation>
+                                                  </xs:annotation>
+                                                  <xs:simpleType>
+                                                  <xs:union>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="3"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  <xs:simpleType>
+                                                  <xs:restriction base="xs:string">
+                                                  <xs:length value="0"/>
+                                                  </xs:restriction>
+                                                  </xs:simpleType>
+                                                  </xs:union>
+                                                  </xs:simpleType>
+                                                  </xs:element>
+                                                  </xs:sequence>
+                                                  </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

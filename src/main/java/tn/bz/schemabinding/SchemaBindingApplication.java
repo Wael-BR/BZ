@@ -1,8 +1,8 @@
 package tn.bz.schemabinding;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import generated.Document;
-import generated.ObjectFactory;
+import tn.bz.schema.crsneg.Document;
+import tn.bz.schema.crsneg.ObjectFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.io.File;

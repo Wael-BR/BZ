@@ -55,13 +55,43 @@
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <executions>
+                    <!-- Execution 1 -->
                     <execution>
-                        <id>xjc</id>
+                        <id>generate-crs-neg</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/resources/CRS-NEG_V2.xsd</source>
+                            </sources>
+                            <outputDirectory>${project.build.directory}/generated-sources/jaxb/crsneg</outputDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <packageName>tn.bz.schema.crsneg</packageName>
+                            <clearOutputDir>false</clearOutputDir>
+                        </configuration>
                     </execution>
+
+                    <!-- Execution 2 -->
+                    <execution>
+                        <id>generate-crs-ppr</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/resources/CRS-PPR_V2.xsd</source>
+                            </sources>
+                            <outputDirectory>${project.build.directory}/generated-sources/jaxb/crsppr</outputDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <packageName>tn.bz.schema.crsppr</packageName>
+                            <clearOutputDir>false</clearOutputDir>
+                        </configuration>
+                    </execution>
+
+                    <!-- Add more executions as needed -->
                 </executions>
                 <configuration>
                     <xjbSources>
@@ -69,6 +99,9 @@
                     </xjbSources>
                     <sources>
                         <source>src/main/resources/CRS-NEG_V2.xsd</source>
+                        <source>src/main/resources/CRS-PPR_V2.xsd</source>
+                        <!--<source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
+                        <source>src/main/resources/MAJ_CRS-ATT.xsd</source>-->
                     </sources>
 
 
@@ -118,7 +151,8 @@
                                 </goals>
                                 <configuration>
                                     <sources>
-                                        <source>${project.build.directory}/generated-sources/jaxb</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/crsneg</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/crsppr</source>
                                     </sources>
                                 </configuration>
                             </execution>
