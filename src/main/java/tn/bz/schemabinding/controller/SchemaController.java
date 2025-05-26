@@ -2,6 +2,7 @@ package tn.bz.schemabinding.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tn.bz.schemabinding.service.SchemaBindingUtils;
 import tn.bz.schemabinding.service.SchemaService;
 
 import java.io.File;

@@ -1,4 +1,4 @@
-package tn.bz.schemabinding.controller;
+package tn.bz.schemabinding.service;
 
 import java.lang.reflect.*;
 import java.util.*;
