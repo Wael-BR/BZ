@@ -40,6 +40,12 @@
             <version>4.0.2</version>
         </dependency>
         <dependency>
+            <groupId>io.github.classgraph</groupId>
+            <artifactId>classgraph</artifactId>
+            <version>4.8.162</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.glassfish.jaxb</groupId>
             <artifactId>jaxb-runtime</artifactId>
             <version>4.0.4</version>
@@ -49,6 +55,18 @@
             <artifactId>reflections</artifactId>
             <version>0.10.2</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-jaxb-annotations</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
 
     </dependencies>
 

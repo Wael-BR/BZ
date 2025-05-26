@@ -1,0 +1,69 @@
+{
+  "Document" : {
+    "EnteteDoc" : {
+      "CodeIAT" : null,
+      "DateDec" : null,
+      "CodeAnnexe" : null,
+      "AnneDec" : null,
+      "PeriodDec" : null
+    },
+    "Extraits" : [ {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : null,
+          "Titulaire" : {
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : null,
+            "Prenom" : null,
+            "Nationalite" : null
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : null,
+            "EtatCpte" : null,
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "SoldDebMois" : {
+              "Value" : null,
+              "Ccy" : null
+            },
+            "SoldfinMois" : {
+              "Value" : null,
+              "Ccy" : null
+            }
+          },
+          "NbrEcritures" : null
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "RefOperation" : {
+              "NatMvtOp" : null,
+              "MntOpDev" : {
+                "Value" : null,
+                "Ccy" : null
+              },
+              "MntOpDin" : {
+                "Value" : null,
+                "Ccy" : null
+              },
+              "DateRetVoy" : null,
+              "DateMvt" : null,
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : null
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : null,
+              "DateAutBCT" : null
+            },
+            "DenomBenif" : null,
+            "Pays" : null
+          }
+        } ]
+      }
+    } ]
+  }
+}
