@@ -40,34 +40,56 @@ public class SchemaBindingApplication {
             return List.of();
         }
 
-        Map<String, Object> result = new LinkedHashMap<>();
+        // 👇 Check for wrapper class with single List field
+        Field[] fields = clazz.getDeclaredFields();
+        List<Field> relevantFields = Arrays.stream(fields)
+                .filter(f -> !Modifier.isStatic(f.getModifiers()) &&
+                        !Modifier.isFinal(f.getModifiers()) &&
+                        !f.getName().equals("serialVersionUID"))
+                .toList();
 
-        for (Field field : clazz.getDeclaredFields()) {
-            if (field.getName().equals("serialVersionUID") ||
-                    Modifier.isStatic(field.getModifiers()) ||
-                    Modifier.isFinal(field.getModifiers())) {
-                continue;
+        if (relevantFields.size() == 1) {
+            Field soleField = relevantFields.get(0);
+            Class<?> soleFieldType = soleField.getType();
+            if (Collection.class.isAssignableFrom(soleFieldType)) {
+                // Unwrap the wrapper class
+                Type genericType = soleField.getGenericType();
+                if (genericType instanceof ParameterizedType) {
+                    Type[] args = ((ParameterizedType) genericType).getActualTypeArguments();
+                    if (args.length == 1 && args[0] instanceof Class<?>) {
+                        Class<?> listElementType = (Class<?>) args[0];
+                        String singular = listElementType.getSimpleName();
+                        Map<String, Object> wrapped = new LinkedHashMap<>();
+                        wrapped.put(singular, buildJsonStructure(listElementType));
+                        return List.of(wrapped);
+                    }
+                }
             }
+        }
 
+        // 👇 Default behavior
+        Map<String, Object> result = new LinkedHashMap<>();
+        for (Field field : relevantFields) {
             field.setAccessible(true);
             Class<?> fieldType = field.getType();
             String jsonKey = capitalize(field.getName());
 
-            // Handle List<T>
             if (Collection.class.isAssignableFrom(fieldType)) {
                 Type genericType = field.getGenericType();
                 if (genericType instanceof ParameterizedType) {
                     Type[] args = ((ParameterizedType) genericType).getActualTypeArguments();
                     if (args.length == 1 && args[0] instanceof Class<?>) {
                         Class<?> listElementType = (Class<?>) args[0];
-                        result.put(jsonKey, List.of(buildJsonStructure(listElementType)));
+                        String singular = listElementType.getSimpleName();
+                        Map<String, Object> wrapped = new LinkedHashMap<>();
+                        wrapped.put(singular, buildJsonStructure(listElementType));
+                        result.put(jsonKey, List.of(wrapped));
                     } else {
                         result.put(jsonKey, List.of());
                     }
                 } else {
                     result.put(jsonKey, List.of());
                 }
-
             } else if (isJaxbComplexType(fieldType)) {
                 result.put(jsonKey, buildJsonStructure(fieldType));
             } else {
@@ -77,6 +99,7 @@ public class SchemaBindingApplication {
 
         return result;
     }
+
 
 
 

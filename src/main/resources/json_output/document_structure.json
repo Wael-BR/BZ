@@ -6,8 +6,8 @@
       "CodeAnnexe" : null,
       "PeriodDec" : null
     },
-    "Extraits" : {
-      "Extraits" : [ {
+    "Extraits" : [ {
+      "Extrait" : {
         "Entete" : {
           "AgenceDom" : null,
           "Titulaire" : {
@@ -39,8 +39,8 @@
           },
           "NbrEcritures" : null
         },
-        "Details" : {
-          "Details" : [ {
+        "Details" : [ {
+          "Detail" : {
             "Rib" : null,
             "RefOperation" : {
               "NatMvtOp" : null,
@@ -66,9 +66,9 @@
             "NomFourniClient" : null,
             "DenomBenif" : null,
             "Pays" : null
-          } ]
-        }
-      } ]
-    }
+          }
+        } ]
+      }
+    } ]
   }
 }
