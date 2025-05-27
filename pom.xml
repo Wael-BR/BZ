@@ -66,6 +66,12 @@
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.samskivert</groupId>
+            <artifactId>jmustache</artifactId>
+            <version>1.15</version>
+        </dependency>
+
 
 
     </dependencies>
@@ -217,3 +223,4 @@
     </profiles>
 
 </project>
+<!-- aaaaaaaaaaaa**************************************************************************** -->
