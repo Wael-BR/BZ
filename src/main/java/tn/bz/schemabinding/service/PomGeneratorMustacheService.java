@@ -2,7 +2,6 @@ package tn.bz.schemabinding.service;
 
 import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.Template;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.bz.schemabinding.entity.XsdEntry;
 

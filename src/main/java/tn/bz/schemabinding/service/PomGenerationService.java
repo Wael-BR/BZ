@@ -13,7 +13,7 @@ public class PomGenerationService {
     private static final String BASE_PACKAGE = "tn.bz.schema.";
 
     public String generateAndWritePom() throws Exception {
-        File xsdDir = new File("src/main/resources");
+        File xsdDir = new File("src/main/resources/xsd");
         File[] xsdFiles = xsdDir.listFiles((dir, name) -> name.toLowerCase(Locale.ROOT).endsWith(".xsd"));
 
         if (xsdFiles == null || xsdFiles.length == 0) {
@@ -37,7 +37,7 @@ public class PomGenerationService {
                     .append("                        </goals>\n")
                     .append("                        <configuration>\n")
                     .append("                            <sources>\n")
-                    .append("                                <source>src/main/resources/").append(filename).append("</source>\n")
+                    .append("                                <source>src/main/resources/xsd/").append(filename).append("</source>\n")
                     .append("                            </sources>\n")
                     .append("                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>\n")
                     .append("                            <packageName>").append(pkg).append("</packageName>\n")
