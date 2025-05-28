@@ -29,6 +29,10 @@ public class PomGeneratorMustacheService {
 
         // Prepare data context for Mustache
         Map<String, Object> context = new HashMap<>();
+        context.put("groupId", "tn.bz");
+        context.put("artifactId", "schema-binding");
+        context.put("version", "1.0-SNAPSHOT");
+        context.put("packageSuffix", "schema");
         context.put("xsdEntries", xsdEntries);
 
         // Step 3: Load and compile template

@@ -39,6 +39,7 @@
             <artifactId>jakarta.xml.bind-api</artifactId>
             <version>4.0.2</version>
         </dependency>
+
         <dependency>
             <groupId>io.github.classgraph</groupId>
             <artifactId>classgraph</artifactId>
@@ -50,6 +51,7 @@
             <artifactId>jaxb-runtime</artifactId>
             <version>4.0.4</version>
         </dependency>
+
         <dependency>
             <groupId>org.reflections</groupId>
             <artifactId>reflections</artifactId>
@@ -61,114 +63,97 @@
             <artifactId>jackson-module-jaxb-annotations</artifactId>
             <version>2.15.0</version>
         </dependency>
+
         <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.3.1</version>
         </dependency>
+
         <dependency>
             <groupId>com.samskivert</groupId>
             <artifactId>jmustache</artifactId>
             <version>1.15</version>
         </dependency>
-
-
-
     </dependencies>
 
     <build>
         <plugins>
-
-            <!-- JAXB2 Maven Plugin for generating Java classes from XSD -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <executions>
                     <execution>
-                        <id>generate-crs-neg-v2</id>
+                        <id>generate-CRS-NEG-V2</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>src/main/resources/CRS-NEG_V2.xsd</source>
+                                <source>src/main/resources/xsd/CRS-NEG_V2.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.crsnegv2</packageName>
+                            <packageName>tn.bz.generated.CRS-NEG-V2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-crs-ppr-v2</id>
+                        <id>generate-CRS-PPR-V2</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>src/main/resources/CRS-PPR_V2.xsd</source>
+                                <source>src/main/resources/xsd/CRS-PPR_V2.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.crspprv2</packageName>
+                            <packageName>tn.bz.generated.CRS-PPR-V2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-maj-crs-all-tndcv-v3</id>
+                        <id>generate-MAJ-CRS-ALL-TNDCV-V3</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
+                                <source>src/main/resources/xsd/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.majcrsalltndcvv3</packageName>
+                            <packageName>tn.bz.generated.MAJ-CRS-ALL-TNDCV-V3</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-maj-crs-att</id>
+                        <id>generate-MAJ-CRS-ATT</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
                         </goals>
                         <configuration>
                             <sources>
-                                <source>src/main/resources/MAJ_CRS-ATT.xsd</source>
+                                <source>src/main/resources/xsd/MAJ_CRS-ATT.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.schema.majcrsatt</packageName>
+                            <packageName>tn.bz.generated.MAJ-CRS-ATT</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
-
                 </executions>
                 <configuration>
                     <xjbSources>
                         <xjbSource>src/main/resources/global.xjb</xjbSource>
                     </xjbSources>
-                    <sources>
-                        <!--<source>src/main/resources/CRS-NEG_V2.xsd</source>
-                        <source>src/main/resources/CRS-PPR_V2.xsd</source>
-                        <source>src/main/resources/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
-                        <source>src/main/resources/MAJ_CRS-ATT.xsd</source>-->
-                    </sources>
-
-
-
-                    <!-- <outputDirectory>${project.build.directory}/generated-sources/jaxb</outputDirectory> -->
                     <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-
-
                     <clearOutputDir>false</clearOutputDir>
                 </configuration>
             </plugin>
 
-            <!-- Compiler plugin -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
@@ -177,16 +162,13 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
-    <!-- Add generated sources to the project build path -->
     <profiles>
         <profile>
             <id>default</id>
             <build>
-
                 <resources>
                     <resource>
                         <directory>src/main/resources</directory>
@@ -206,21 +188,18 @@
                                 </goals>
                                 <configuration>
                                     <sources>
-                                        <source>${project.build.directory}/generated-sources/jaxb/crs-neg-v2</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/crs-ppr-v2</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/maj-crs-all-tndcv-v3</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/maj-crs-att</source>
-
+                                        <source>${project.build.directory}/generated-sources/jaxb/CRS-NEG-V2</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/CRS-PPR-V2</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ-CRS-ALL-TNDCV-V3</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ-CRS-ATT</source>
                                     </sources>
                                 </configuration>
                             </execution>
                         </executions>
                     </plugin>
-
                 </plugins>
             </build>
         </profile>
     </profiles>
-
 </project>
-<!-- aaaaaaaaaaaa**************************************************************************** -->
+<!-- test********************************************************************************** -->
