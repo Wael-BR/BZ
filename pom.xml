@@ -85,7 +85,7 @@
                 <version>3.1.0</version>
                 <executions>
                     <execution>
-                        <id>generate-CRS-NEG-V2</id>
+                        <id>generate-CRS_NEG_V2</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -95,12 +95,12 @@
                                 <source>src/main/resources/xsd/CRS-NEG_V2.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.generated.CRS-NEG-V2</packageName>
+                            <packageName>tn.bz.generated.CRS_NEG_V2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-CRS-PPR-V2</id>
+                        <id>generate-CRS_PPR_V2</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -110,12 +110,12 @@
                                 <source>src/main/resources/xsd/CRS-PPR_V2.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.generated.CRS-PPR-V2</packageName>
+                            <packageName>tn.bz.generated.CRS_PPR_V2</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-MAJ-CRS-ALL-TNDCV-V3</id>
+                        <id>generate-MAJ_CRS_ALL_TNDCV_V3</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -125,12 +125,12 @@
                                 <source>src/main/resources/xsd/MAJ_CRS-ALL-TNDCV_V3.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.generated.MAJ-CRS-ALL-TNDCV-V3</packageName>
+                            <packageName>tn.bz.generated.MAJ_CRS_ALL_TNDCV_V3</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
                     <execution>
-                        <id>generate-MAJ-CRS-ATT</id>
+                        <id>generate-MAJ_CRS_ATT</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>xjc</goal>
@@ -140,7 +140,7 @@
                                 <source>src/main/resources/xsd/MAJ_CRS-ATT.xsd</source>
                             </sources>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
-                            <packageName>tn.bz.generated.MAJ-CRS-ATT</packageName>
+                            <packageName>tn.bz.generated.MAJ_CRS_ATT</packageName>
                             <clearOutputDir>false</clearOutputDir>
                         </configuration>
                     </execution>
@@ -188,10 +188,10 @@
                                 </goals>
                                 <configuration>
                                     <sources>
-                                        <source>${project.build.directory}/generated-sources/jaxb/CRS-NEG-V2</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/CRS-PPR-V2</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ-CRS-ALL-TNDCV-V3</source>
-                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ-CRS-ATT</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/CRS_NEG_V2</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/CRS_PPR_V2</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ_CRS_ALL_TNDCV_V3</source>
+                                        <source>${project.build.directory}/generated-sources/jaxb/MAJ_CRS_ATT</source>
                                     </sources>
                                 </configuration>
                             </execution>

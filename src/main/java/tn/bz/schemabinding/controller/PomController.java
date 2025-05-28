@@ -14,11 +14,13 @@ public class PomController {
     private PomGeneratorMustacheService pomGeneratorService;
 
     @PostMapping("/pom")
-    public String generatePom() {
+    public String generatePom()  {
         try {
             return pomGeneratorService.generatePomXml();
         } catch (IOException e) {
             return "Error: " + e.getMessage();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

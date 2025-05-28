@@ -178,5 +178,5 @@ for %%L in (!helperSourcesBlock!) do (
 >>"%pomFile%" echo         </profile>
 >>"%pomFile%" echo     </profiles>
 >>"%pomFile%" echo </project>
-
+>>"%pomFile%" echo <!-- ****************************************************** From pom.mustache template ****************************************************** -->
 echo pom.xml has been regenerated successfully.
