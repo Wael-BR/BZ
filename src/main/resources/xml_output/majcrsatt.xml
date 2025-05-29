@@ -19,8 +19,8 @@
                 <ModReg>null</ModReg>
                 <NatMvtOp>null</NatMvtOp>
                 <MntOpDev>
-                  <Value>null</Value>
-                  <Ccy>null</Ccy>
+                  <Value>15.30</Value>
+                  <Ccy>3</Ccy>
                 </MntOpDev>
                 <NatOp>null</NatOp>
                 <CodMvt>null</CodMvt>
@@ -42,10 +42,7 @@
               <EtatCpte>null</EtatCpte>
               <DateGelCpte>null</DateGelCpte>
               <DateOuvCpte>null</DateOuvCpte>
-              <SoldfinMois>
-                <Value>null</Value>
-                <Ccy>null</Ccy>
-              </SoldfinMois>
+              <SoldfinMois Ccy="">null</SoldfinMois>
             </RefCompte>
             <AgenceDom>null</AgenceDom>
             <Titulaire>

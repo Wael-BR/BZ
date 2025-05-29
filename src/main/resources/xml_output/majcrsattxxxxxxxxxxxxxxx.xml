@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testTEST__>
+  <testTEST__>
+    <Document>
+      <Extraits>
+        <Extrait>
+          <Details>
+            <Detail>
+              <RefAutorisationBct>
+                <NumAutBCT>null</NumAutBCT>
+                <DateAutBCT>null</DateAutBCT>
+              </RefAutorisationBct>
+              <NomFourniClient>Entreprise X</NomFourniClient>
+              <RefOperation>
+                <MntOpDin Ccy="TND">1650.00</MntOpDin>
+                <DateMvt>2025-04-20</DateMvt>
+                <ModReg>VIREMENT</ModReg>
+                <NatMvtOp>VIR</NatMvtOp>
+                <MntOpDev Ccy="EUR">500.00</MntOpDev>
+                <NatOp>INTL</NatOp>
+                <CodMvt>987654</CodMvt>
+                <NumMsgeSwiftMvt>MT103</NumMsgeSwiftMvt>
+                <TypeOp>CREDIT</TypeOp>
+              </RefOperation>
+              <DenomBenif>Doe John</DenomBenif>
+              <Rib>TN590000123456789000000</Rib>
+              <Pays>FR</Pays>
+            </Detail>
+          </Details>
+          <Details>
+            <Detail>
+              <RefAutorisationBct>
+                <NumAutBCT>BCT998877</NumAutBCT>
+                <DateAutBCT>2024-11-01</DateAutBCT>
+              </RefAutorisationBct>
+              <NomFourniClient>Banque Y</NomFourniClient>
+              <RefOperation>
+                <MntOpDin Ccy="TND">320.00</MntOpDin>
+                <DateMvt>2025-05-10</DateMvt>
+                <ModReg>PRELEVEMENT</ModReg>
+                <NatMvtOp>PRLV</NatMvtOp>
+                <MntOpDev Ccy="USD">100.00</MntOpDev>
+                <NatOp>DOM</NatOp>
+                <CodMvt>123456</CodMvt>
+                <NumMsgeSwiftMvt>MT202</NumMsgeSwiftMvt>
+                <TypeOp>DEBIT</TypeOp>
+              </RefOperation>
+              <DenomBenif>Smith Alice</DenomBenif>
+              <Rib>TN590000123456789000000</Rib>
+              <Pays>TN</Pays>
+            </Detail>
+          </Details>
+          <Entete>
+            <RefCompte>
+              <DeviseCpte>TND</DeviseCpte>
+              <DateclotureCpte>null</DateclotureCpte>
+              <SoldDebMois Ccy="TND">1000.00</SoldDebMois>
+              <NumAutBCT>null</NumAutBCT>
+              <Rib>TN590000123456789000000</Rib>
+              <EtatCpte>ACTIF</EtatCpte>
+              <DateGelCpte>null</DateGelCpte>
+              <DateOuvCpte>2020-01-15</DateOuvCpte>
+              <DateAutBCT>null</DateAutBCT>
+              <SoldfinMois Ccy="TND">1500.75</SoldfinMois>
+            </RefCompte>
+            <AgenceDom>Agence Centrale</AgenceDom>
+            <Titulaire>
+              <Prenom>John</Prenom>
+              <TypeIdentifiant>CIN</TypeIdentifiant>
+              <Nationalite>TUN</Nationalite>
+              <TypeTitul>INDIVIDU</TypeTitul>
+              <CodeIdentifiant>C12345678</CodeIdentifiant>
+              <Nom>Doe</Nom>
+            </Titulaire>
+            <NbrEcritures>2</NbrEcritures>
+          </Entete>
+        </Extrait>
+      </Extraits>
+      <Extraits>
+        <Extrait>
+          <Details>
+            <Detail>
+              <RefAutorisationBct>
+                <NumAutBCT>null</NumAutBCT>
+                <DateAutBCT>null</DateAutBCT>
+              </RefAutorisationBct>
+              <NomFourniClient>Fournisseur Z</NomFourniClient>
+              <RefOperation>
+                <MntOpDin Ccy="USD">50.00</MntOpDin>
+                <DateMvt>2025-05-01</DateMvt>
+                <ModReg>DEBIT AUTO</ModReg>
+                <NatMvtOp>FRAIS</NatMvtOp>
+                <MntOpDev Ccy="USD">50.00</MntOpDev>
+                <NatOp>FRAIS</NatOp>
+                <CodMvt>999111</CodMvt>
+                <NumMsgeSwiftMvt>null</NumMsgeSwiftMvt>
+                <TypeOp>DEBIT</TypeOp>
+              </RefOperation>
+              <DenomBenif>Tech Solutions SARL</DenomBenif>
+              <Rib>TN590000987654321000000</Rib>
+              <Pays>US</Pays>
+            </Detail>
+          </Details>
+          <Entete>
+            <RefCompte>
+              <DeviseCpte>USD</DeviseCpte>
+              <DateclotureCpte>null</DateclotureCpte>
+              <SoldDebMois Ccy="USD">2000.00</SoldDebMois>
+              <NumAutBCT>null</NumAutBCT>
+              <Rib>TN590000987654321000000</Rib>
+              <EtatCpte>ACTIF</EtatCpte>
+              <DateGelCpte>null</DateGelCpte>
+              <DateOuvCpte>2022-07-01</DateOuvCpte>
+              <DateAutBCT>null</DateAutBCT>
+              <SoldfinMois Ccy="USD">1850.50</SoldfinMois>
+            </RefCompte>
+            <AgenceDom>Agence Sud</AgenceDom>
+            <Titulaire>
+              <Prenom>null</Prenom>
+              <TypeIdentifiant>MF</TypeIdentifiant>
+              <Nationalite>TUN</Nationalite>
+              <TypeTitul>ENTREPRISE</TypeTitul>
+              <CodeIdentifiant>MF98765432</CodeIdentifiant>
+              <Nom>null</Nom>
+              <RaisSociale>Tech Solutions SARL</RaisSociale>
+            </Titulaire>
+            <NbrEcritures>1</NbrEcritures>
+          </Entete>
+        </Extrait>
+      </Extraits>
+      <EnteteDoc>
+        <CodeAnnexe>ANN789</CodeAnnexe>
+        <CodeIAT>IAT123456</CodeIAT>
+        <PeriodDec>2025Q2</PeriodDec>
+        <DateDec>2025-05-29</DateDec>
+      </EnteteDoc>
+    </Document>
+  </testTEST__>
+</testTEST__>

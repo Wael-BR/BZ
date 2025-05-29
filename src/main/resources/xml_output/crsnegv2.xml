@@ -12,17 +12,11 @@
               </RefAutorisationBct>
               <NomFourniClient>null</NomFourniClient>
               <RefOperation>
-                <MntOpDin>
-                  <Value>null</Value>
-                  <Ccy>null</Ccy>
-                </MntOpDin>
+                <MntOpDin Ccy="2">7</MntOpDin>
                 <DateMvt>null</DateMvt>
                 <ModReg>null</ModReg>
                 <NatMvtOp>null</NatMvtOp>
-                <MntOpDev>
-                  <Value>null</Value>
-                  <Ccy>null</Ccy>
-                </MntOpDev>
+                <MntOpDev Ccy="3">15</MntOpDev>
                 <NatOp>null</NatOp>
                 <CodMvt>null</CodMvt>
                 <NumMsgeSwiftMvt>null</NumMsgeSwiftMvt>
@@ -37,20 +31,14 @@
             <RefCompte>
               <DeviseCpte>null</DeviseCpte>
               <DateclotureCpte>null</DateclotureCpte>
-              <SoldDebMois>
-                <Value>null</Value>
-                <Ccy>null</Ccy>
-              </SoldDebMois>
+              <SoldDebMois Ccy=""/>
               <NumAutBCT>null</NumAutBCT>
               <Rib>null</Rib>
               <EtatCpte>null</EtatCpte>
               <DateGelCpte>null</DateGelCpte>
               <DateOuvCpte>null</DateOuvCpte>
               <DateAutBCT>null</DateAutBCT>
-              <SoldfinMois>
-                <Value>null</Value>
-                <Ccy>null</Ccy>
-              </SoldfinMois>
+              <SoldfinMois Ccy=""/>
             </RefCompte>
             <AgenceDom>null</AgenceDom>
             <Titulaire>

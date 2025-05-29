@@ -1,74 +1,172 @@
 {
-  "Document" : {
-    "EnteteDoc" : {
-      "CodeIAT" : null,
-      "DateDec" : null,
-      "CodeAnnexe" : null,
-      "PeriodDec" : null
+  "Document": {
+    "EnteteDoc": {
+      "CodeIAT": "IAT123456",
+      "DateDec": "2025-05-29",
+      "CodeAnnexe": "ANN789",
+      "PeriodDec": "2025Q2"
     },
-    "Extraits" : [ {
-      "Extrait" : {
-        "Entete" : {
-          "AgenceDom" : null,
-          "Titulaire" : {
-            "TypeTitul" : null,
-            "TypeIdentifiant" : null,
-            "CodeIdentifiant" : null,
-            "Nom" : null,
-            "Prenom" : null,
-            "Nationalite" : null,
-            "RaisSociale" : null
-          },
-          "RefCompte" : {
-            "Rib" : null,
-            "DeviseCpte" : null,
-            "DateOuvCpte" : null,
-            "EtatCpte" : null,
-            "DateclotureCpte" : null,
-            "DateGelCpte" : null,
-            "NumAutBCT" : null,
-            "DateAutBCT" : null,
-            "SoldDebMois" : {
-              "Value" : null,
-              "Ccy" : null
+    "Extraits": [
+      {
+        "Extrait": {
+          "Entete": {
+            "AgenceDom": "Agence Centrale",
+            "Titulaire": {
+              "TypeTitul": "INDIVIDU",
+              "TypeIdentifiant": "CIN",
+              "CodeIdentifiant": "C12345678",
+              "Nom": "Doe",
+              "Prenom": "John",
+              "Nationalite": "TUN"
             },
-            "SoldfinMois" : {
-              "Value" : null,
-              "Ccy" : null
+            "RefCompte": {
+              "Rib": "TN590000123456789000000",
+              "DeviseCpte": "TND",
+              "DateOuvCpte": "2020-01-15",
+              "EtatCpte": "ACTIF",
+              "DateclotureCpte": null,
+              "DateGelCpte": null,
+              "NumAutBCT": null,
+              "DateAutBCT": null,
+              "SoldDebMois": {
+                "Value": "1000.00",
+                "Ccy": "TND"
+              },
+              "SoldfinMois": {
+                "Value": "1500.75",
+                "Ccy": "TND"
+              }
+            },
+            "NbrEcritures": 2
+          },
+          "Details": [
+            {
+              "Detail": {
+                "Rib": "TN590000123456789000000",
+                "RefOperation": {
+                  "NatMvtOp": "VIR",
+                  "MntOpDev": {
+                    "Value": "500.00",
+                    "Ccy": "EUR"
+                  },
+                  "MntOpDin": {
+                    "Value": "1650.00",
+                    "Ccy": "TND"
+                  },
+                  "DateMvt": "2025-04-20",
+                  "TypeOp": "CREDIT",
+                  "NatOp": "INTL",
+                  "CodMvt": "987654",
+                  "ModReg": "VIREMENT",
+                  "NumMsgeSwiftMvt": "MT103"
+                },
+                "RefAutorisationBct": {
+                  "NumAutBCT": null,
+                  "DateAutBCT": null
+                },
+                "NomFourniClient": "Entreprise X",
+                "DenomBenif": "Doe John",
+                "Pays": "FR"
+              }
+            },
+            {
+              "Detail": {
+                "Rib": "TN590000123456789000000",
+                "RefOperation": {
+                  "NatMvtOp": "PRLV",
+                  "MntOpDev": {
+                    "Value": "100.00",
+                    "Ccy": "USD"
+                  },
+                  "MntOpDin": {
+                    "Value": "320.00",
+                    "Ccy": "TND"
+                  },
+                  "DateMvt": "2025-05-10",
+                  "TypeOp": "DEBIT",
+                  "NatOp": "DOM",
+                  "CodMvt": "123456",
+                  "ModReg": "PRELEVEMENT",
+                  "NumMsgeSwiftMvt": "MT202"
+                },
+                "RefAutorisationBct": {
+                  "NumAutBCT": "BCT998877",
+                  "DateAutBCT": "2024-11-01"
+                },
+                "NomFourniClient": "Banque Y",
+                "DenomBenif": "Smith Alice",
+                "Pays": "TN"
+              }
             }
+          ]
+        }
+      },
+      {
+        "Extrait": {
+          "Entete": {
+            "AgenceDom": "Agence Sud",
+            "Titulaire": {
+              "TypeTitul": "ENTREPRISE",
+              "TypeIdentifiant": "MF",
+              "CodeIdentifiant": "MF98765432",
+              "Nom": null,
+              "Prenom": null,
+              "Nationalite": "TUN",
+              "RaisSociale": "Tech Solutions SARL"
+            },
+            "RefCompte": {
+              "Rib": "TN590000987654321000000",
+              "DeviseCpte": "USD",
+              "DateOuvCpte": "2022-07-01",
+              "EtatCpte": "ACTIF",
+              "DateclotureCpte": null,
+              "DateGelCpte": null,
+              "NumAutBCT": null,
+              "DateAutBCT": null,
+              "SoldDebMois": {
+                "Value": "2000.00",
+                "Ccy": "USD"
+              },
+              "SoldfinMois": {
+                "Value": "1850.50",
+                "Ccy": "USD"
+              }
+            },
+            "NbrEcritures": 1
           },
-          "NbrEcritures" : null
-        },
-        "Details" : [ {
-          "Detail" : {
-            "Rib" : null,
-            "RefOperation" : {
-              "NatMvtOp" : null,
-              "MntOpDev" : {
-                "Value" : null,
-                "Ccy" : null
-              },
-              "MntOpDin" : {
-                "Value" : null,
-                "Ccy" : null
-              },
-              "DateMvt" : null,
-              "TypeOp" : null,
-              "NatOp" : null,
-              "CodMvt" : null,
-              "ModReg" : null,
-              "NumMsgeSwiftMvt" : null
-            },
-            "RefAutorisationBct" : {
-              "NumAutBCT" : null,
-              "DateAutBCT" : null
-            },
-            "NomFourniClient" : null,
-            "DenomBenif" : null,
-            "Pays" : null
-          }
-        } ]
+          "Details": [
+            {
+              "Detail": {
+                "Rib": "TN590000987654321000000",
+                "RefOperation": {
+                  "NatMvtOp": "FRAIS",
+                  "MntOpDev": {
+                    "Value": "50.00",
+                    "Ccy": "USD"
+                  },
+                  "MntOpDin": {
+                    "Value": "50.00",
+                    "Ccy": "USD"
+                  },
+                  "DateMvt": "2025-05-01",
+                  "TypeOp": "DEBIT",
+                  "NatOp": "FRAIS",
+                  "CodMvt": "999111",
+                  "ModReg": "DEBIT AUTO",
+                  "NumMsgeSwiftMvt": null
+                },
+                "RefAutorisationBct": {
+                  "NumAutBCT": null,
+                  "DateAutBCT": null
+                },
+                "NomFourniClient": "Fournisseur Z",
+                "DenomBenif": "Tech Solutions SARL",
+                "Pays": "US"
+              }
+            }
+          ]
+        }
       }
-    } ]
+    ]
   }
 }

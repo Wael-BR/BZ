@@ -5,6 +5,8 @@ import org.json.XML;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import javax.xml.transform.*;
 
@@ -50,17 +52,53 @@ public class JsonToXmlService {
                 .newDocumentBuilder()
                 .parse(new InputSource(new StringReader(inputXml)));
 
+        document.getDocumentElement().normalize();
+
+        NodeList allElements = document.getElementsByTagName("*");
+
+        for (int i = 0; i < allElements.getLength(); i++) {
+            Element parent = (Element) allElements.item(i);
+
+            Element valueElement = getDirectChildByTagName(parent, "Value");
+            Element ccyElement = getDirectChildByTagName(parent, "Ccy");
+
+            if (valueElement != null && ccyElement != null) {
+                String value = valueElement.getTextContent();
+                String ccy = ccyElement.getTextContent();
+
+                // Remove all children
+                while (parent.hasChildNodes()) {
+                    parent.removeChild(parent.getFirstChild());
+                }
+
+                // Set content and attribute
+                parent.setTextContent("null".equals(value) ? "" : value);
+                parent.setAttribute("Ccy", "null".equals(ccy) ? "" : ccy);
+            }
+        }
+
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-
-        // Optional: control indentation size (e.g. 2 spaces)
         transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "2");
 
         StringWriter writer = new StringWriter();
         transformer.transform(new DOMSource(document), new StreamResult(writer));
-
         return writer.toString();
     }
+
+    private Element getDirectChildByTagName(Element parent, String tagName) {
+        NodeList children = parent.getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            if (children.item(i) instanceof Element) {
+                Element child = (Element) children.item(i);
+                if (child.getTagName().equals(tagName)) {
+                    return child;
+                }
+            }
+        }
+        return null;
+    }
+
 
     public String convertJsonStringToXmlAndSave(String jsonContent, String outputFileName, String rootElementName) throws Exception {
         String sanitizedRoot = sanitizeElementName(rootElementName);
