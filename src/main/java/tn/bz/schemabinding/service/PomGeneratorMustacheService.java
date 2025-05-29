@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -34,6 +36,10 @@ public class PomGeneratorMustacheService {
         context.put("artifactId", "schema-binding");
         context.put("version", "1.0-SNAPSHOT");
         context.put("xsdEntries", xsdEntries);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDate = LocalDateTime.now().format(formatter);
+        context.put("modificationDate", formattedDate);
 
         // Step 3: Load and compile template
         String template = Files.readString(Paths.get("src/main/resources/templates/pom.mustache"));
