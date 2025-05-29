@@ -106,6 +106,21 @@ break > "%pomFile%"
 >>"%pomFile%" echo             <artifactId>jaxb-api</artifactId>
 >>"%pomFile%" echo             <version>2.3.1</version>
 >>"%pomFile%" echo         </dependency>
+>>"%pomFile%" echo
+>>"%pomFile%" echo <!-- ********************************************* JSON TO XML ***********************************************-->
+>>"%pomFile%" echo         <!-- Jackson for JSON parsing -->
+>>"%pomFile%" echo         <dependency>
+>>"%pomFile%" echo             <groupId>com.fasterxml.jackson.core</groupId>
+>>"%pomFile%" echo             <artifactId>jackson-databind</artifactId>
+>>"%pomFile%" echo             <version>2.17.0</version>
+>>"%pomFile%" echo         </dependency>
+>>"%pomFile%" echo
+>>"%pomFile%" echo         <dependency>
+>>"%pomFile%" echo             <groupId>org.json</groupId>
+>>"%pomFile%" echo             <artifactId>json</artifactId>
+>>"%pomFile%" echo             <version>20240303</version>
+>>"%pomFile%" echo         </dependency>
+>>"%pomFile%" echo
 >>"%pomFile%" echo     </dependencies>
 >>"%pomFile%" echo
 >>"%pomFile%" echo     <build>
@@ -178,5 +193,5 @@ for %%L in (!helperSourcesBlock!) do (
 >>"%pomFile%" echo         </profile>
 >>"%pomFile%" echo     </profiles>
 >>"%pomFile%" echo </project>
->>"%pomFile%" echo <!-- ****************************************************** From pom.mustache template ****************************************************** -->
+>>"%pomFile%" echo <!-- ****************************************************** From .bat ****************************************************** -->
 echo pom.xml has been regenerated successfully.
