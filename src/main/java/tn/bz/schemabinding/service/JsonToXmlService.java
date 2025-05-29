@@ -61,4 +61,47 @@ public class JsonToXmlService {
 
         return writer.toString();
     }
+
+    public String convertJsonStringToXmlAndSave(String jsonContent, String outputFileName, String rootElementName) throws Exception {
+        String sanitizedRoot = sanitizeElementName(rootElementName);
+
+        // Convert to raw XML
+        JSONObject jsonObject = new JSONObject(jsonContent);
+        String rawXml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                "<" + sanitizedRoot + ">" +
+                XML.toString(jsonObject, sanitizedRoot) +
+                "</" + sanitizedRoot + ">";
+
+        // Format
+        String prettyXml = formatXml(rawXml);
+
+        // Save
+        if (!outputFileName.endsWith(".xml")) {
+            outputFileName += ".xml";
+        }
+        Path outputPath = Path.of("src/main/resources/xml_output", outputFileName);
+        Files.createDirectories(outputPath.getParent());
+
+        try (FileWriter writer = new FileWriter(outputPath.toFile())) {
+            writer.write(prettyXml);
+        }
+
+        return "XML written to: " + outputPath.toAbsolutePath();
+    }
+
+
+
+    /*** thi s method is just to ensure the rootElementName is well written  ***/
+    private String sanitizeElementName(String name) {
+        if (name == null || name.isEmpty()) {
+            return "root";
+        }
+
+        String sanitized = name.replaceAll("[^a-zA-Z0-9_-]", "_");
+        if (!sanitized.matches("^[a-zA-Z].*")) {
+            sanitized = "root_" + sanitized;
+        }
+        return sanitized;
+    }
+
 }
