@@ -121,6 +121,26 @@ break > "%pomFile%"
 >>"%pomFile%" echo             <version>20240303</version>
 >>"%pomFile%" echo         </dependency>
 >>"%pomFile%" echo
+>>"%pomFile%" echo          <!-- ********************************************* JSON TO JAVA CLASSES ***********************************************-->
+>>"%pomFile%" echo
+>>"%pomFile%" echo           <dependency>
+>>"%pomFile%" echo               <groupId>org.jsonschema2pojo</groupId>
+>>"%pomFile%" echo               <artifactId>jsonschema2pojo-core</artifactId>
+>>"%pomFile%" echo               <version>1.1.1</version>
+>>"%pomFile%" echo           </dependency>
+>>"%pomFile%" echo           <dependency>
+>>"%pomFile%" echo               <groupId>com.sun.codemodel</groupId>
+>>"%pomFile%" echo               <artifactId>codemodel</artifactId>
+>>"%pomFile%" echo               <version>2.6</version>
+>>"%pomFile%" echo           </dependency>
+>>"%pomFile%" echo
+>>"%pomFile%" echo           <!-- ********************************************* JSON TO JSON SCHEMA ***********************************************-->
+>>"%pomFile%" echo           <dependency>
+>>"%pomFile%" echo               <groupId>com.fasterxml.jackson.module</groupId>
+>>"%pomFile%" echo               <artifactId>jackson-module-jsonSchema</artifactId>
+>>"%pomFile%" echo               <version>2.13.0</version>
+>>"%pomFile%" echo           </dependency>
+>>"%pomFile%" echo
 >>"%pomFile%" echo     </dependencies>
 >>"%pomFile%" echo
 >>"%pomFile%" echo     <build>
