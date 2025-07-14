@@ -1,4 +1,4 @@
-package tn.bz.schemabinding.service;
+package tn.bz.schemabinding.service.notNeeded;
 
 import com.sun.codemodel.JCodeModel;
 import org.jsonschema2pojo.*;

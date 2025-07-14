@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import tn.bz.schemabinding.service.JsonToPojoService;
+import tn.bz.schemabinding.service.notNeeded.JsonToPojoService;
 
 @RestController
 @RequestMapping("/api/json2pojo")

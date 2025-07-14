@@ -15,10 +15,13 @@ public class JsonUploadController {
         this.service = service;
     }
 
-    @PostMapping(consumes = "multipart/form-data")
-    public ResponseEntity<String> uploadJson(@RequestParam("file") MultipartFile file) throws Exception {
-        String baseTableName = file.getOriginalFilename().replace(".json", "").replaceAll("[^a-zA-Z0-9_]", "_");
-        String result = service.processJsonFile(baseTableName, file.getInputStream());
+    @PostMapping(path = "/create-table", consumes = "multipart/form-data")
+    public ResponseEntity<String> createTableOnly(@RequestParam("file") MultipartFile file) throws Exception {
+        String baseTableName = file.getOriginalFilename()
+                .replace(".json", "")
+                .replaceAll("[^a-zA-Z0-9_]", "_");
+
+        String result = service.createTableFromJson(baseTableName, file.getInputStream());
         return ResponseEntity.ok(result);
     }
 }
