@@ -23,4 +23,19 @@ public class DynamicJsonExportController {
             return ResponseEntity.badRequest().body("Error fetching data: " + e.getMessage());
         }
     }
+
+
+    /*** follow the json structure kima kenou ***/
+    @GetMapping("/json-structured")
+    public ResponseEntity<?> exportStructuredJson(@RequestParam String table) {
+        try {
+            List<Map<String, Object>> rows = service.fetchTableData(table);
+            if (rows.isEmpty()) return ResponseEntity.noContent().build();
+            Map<String, Object> json = service.convertToStructuredJson(rows);
+            return ResponseEntity.ok(json);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error: " + e.getMessage());
+        }
+    }
+
 }
