@@ -27,109 +27,109 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  */
 @XmlRegistry
 public class ObjectFactory {
-
-
-    /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: tn.bz.schema.majcrsatt
-     * 
-     */
-    public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link Document }
-     * 
-     */
-    public Document createDocument() {
-        return new Document();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits }
-     * 
-     */
-    public Document.Extraits createDocumentExtraits() {
-        return new Document.Extraits();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait }
-     * 
-     */
-    public Document.Extraits.Extrait createDocumentExtraitsExtrait() {
-        return new Document.Extraits.Extrait();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Details }
-     * 
-     */
-    public Document.Extraits.Extrait.Details createDocumentExtraitsExtraitDetails() {
-        return new Document.Extraits.Extrait.Details();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail }
-     * 
-     */
-    public Document.Extraits.Extrait.Details.Detail createDocumentExtraitsExtraitDetailsDetail() {
-        return new Document.Extraits.Extrait.Details.Detail();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Entete }
-     * 
-     */
-    public Document.Extraits.Extrait.Entete createDocumentExtraitsExtraitEntete() {
-        return new Document.Extraits.Extrait.Entete();
-    }
-
-    /**
-     * Create an instance of {@link Document.EnteteDoc }
-     * 
-     */
-    public Document.EnteteDoc createDocumentEnteteDoc() {
-        return new Document.EnteteDoc();
-    }
-
-    /**
-     * Create an instance of {@link TMontant }
-     * 
-     */
-    public TMontant createTMontant() {
-        return new TMontant();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail.RefOperation }
-     * 
-     */
-    public Document.Extraits.Extrait.Details.Detail.RefOperation createDocumentExtraitsExtraitDetailsDetailRefOperation() {
-        return new Document.Extraits.Extrait.Details.Detail.RefOperation();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail.RefAutorisationBct }
-     * 
-     */
-    public Document.Extraits.Extrait.Details.Detail.RefAutorisationBct createDocumentExtraitsExtraitDetailsDetailRefAutorisationBct() {
-        return new Document.Extraits.Extrait.Details.Detail.RefAutorisationBct();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Entete.Titulaire }
-     * 
-     */
-    public Document.Extraits.Extrait.Entete.Titulaire createDocumentExtraitsExtraitEnteteTitulaire() {
-        return new Document.Extraits.Extrait.Entete.Titulaire();
-    }
-
-    /**
-     * Create an instance of {@link Document.Extraits.Extrait.Entete.RefCompte }
-     * 
-     */
-    public Document.Extraits.Extrait.Entete.RefCompte createDocumentExtraitsExtraitEnteteRefCompte() {
-        return new Document.Extraits.Extrait.Entete.RefCompte();
-    }
+//
+//
+//    /**
+//     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: tn.bz.schema.majcrsatt
+//     *
+//     */
+//    public ObjectFactory() {
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document }
+//     *
+//     */
+//    public Document createDocument() {
+//        return new Document();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits }
+//     *
+//     */
+//    public Document.Extraits createDocumentExtraits() {
+//        return new Document.Extraits();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait }
+//     *
+//     */
+//    public Document.Extraits.Extrait createDocumentExtraitsExtrait() {
+//        return new Document.Extraits.Extrait();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Details }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Details createDocumentExtraitsExtraitDetails() {
+//        return new Document.Extraits.Extrait.Details();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Details.Detail createDocumentExtraitsExtraitDetailsDetail() {
+//        return new Document.Extraits.Extrait.Details.Detail();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Entete }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Entete createDocumentExtraitsExtraitEntete() {
+//        return new Document.Extraits.Extrait.Entete();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.EnteteDoc }
+//     *
+//     */
+//    public Document.EnteteDoc createDocumentEnteteDoc() {
+//        return new Document.EnteteDoc();
+//    }
+//
+//    /**
+//     * Create an instance of {@link TMontant }
+//     *
+//     */
+//    public TMontant createTMontant() {
+//        return new TMontant();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail.RefOperation }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Details.Detail.RefOperation createDocumentExtraitsExtraitDetailsDetailRefOperation() {
+//        return new Document.Extraits.Extrait.Details.Detail.RefOperation();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Details.Detail.RefAutorisationBct }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Details.Detail.RefAutorisationBct createDocumentExtraitsExtraitDetailsDetailRefAutorisationBct() {
+//        return new Document.Extraits.Extrait.Details.Detail.RefAutorisationBct();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Entete.Titulaire }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Entete.Titulaire createDocumentExtraitsExtraitEnteteTitulaire() {
+//        return new Document.Extraits.Extrait.Entete.Titulaire();
+//    }
+//
+//    /**
+//     * Create an instance of {@link Document.Extraits.Extrait.Entete.RefCompte }
+//     *
+//     */
+//    public Document.Extraits.Extrait.Entete.RefCompte createDocumentExtraitsExtraitEnteteRefCompte() {
+//        return new Document.Extraits.Extrait.Entete.RefCompte();
+//    }
 
 }
