@@ -1,0 +1,669 @@
+{
+  "Document" : {
+    "EnteteDoc" : {
+      "CodeIAT" : "25",
+      "DateDec" : "12/07/2025",
+      "CodeAnnexe" : "CRS-007",
+      "PeriodDec" : "012024"
+    },
+    "Extraits" : [ {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "057",
+          "NbrEcritures" : "266",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "SO****************ETY",
+            "Prenom" : "SO****************ETY",
+            "Nationalite" : "TN",
+            "RaisSociale" : "SO****************ETY"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "USD",
+            "DateOuvCpte" : "06/15/2023",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "12554_BZ.1150",
+            "DateAutBCT" : "10/17/2023"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "10/04/2023",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "3",
+              "NumMsgeSwiftMvt" : "FT23290BWDB5"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "12554_BZ.1150",
+              "DateAutBCT" : "10/17/2023"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "047",
+          "NbrEcritures" : "28",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST******* CO",
+            "Prenom" : "ST******* CO",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST******* CO"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "01/05/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10293_BZ.1744",
+            "DateAutBCT" : "06/06/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "06/06/2024",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT241585RBXN"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10293_BZ.1744",
+              "DateAutBCT" : "06/06/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "000",
+          "NbrEcritures" : "4",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "EN*RAC",
+            "Prenom" : "EN*RAC",
+            "Nationalite" : "TN",
+            "RaisSociale" : "EN*RAC"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "03/18/2024",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "11513_BZ.1086",
+            "DateAutBCT" : "04/17/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "04/17/2024",
+              "TypeOp" : "0122",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT24108RDLH7"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "11513_BZ.1086",
+              "DateAutBCT" : "04/17/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "015",
+          "NbrEcritures" : "70",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "SO**************************CE-",
+            "Prenom" : "SO**************************CE-",
+            "Nationalite" : "TN",
+            "RaisSociale" : "SO***************ARL"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "06/05/2013",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10135_BZ.1086",
+            "DateAutBCT" : "01/23/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "01/23/2024",
+              "TypeOp" : "0999",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "1",
+              "NumMsgeSwiftMvt" : "FT24023S1XZC"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10135_BZ.1086",
+              "DateAutBCT" : "01/23/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "046",
+          "NbrEcritures" : "44",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "AC*******ING",
+            "Prenom" : "AC*******ING",
+            "Nationalite" : "TN",
+            "RaisSociale" : "AC*******ING"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "01/16/2020",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10313_BZ.1086",
+            "DateAutBCT" : "01/23/2025"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "01/23/2025",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "3",
+              "NumMsgeSwiftMvt" : "FT25023YKNT6"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10313_BZ.1086",
+              "DateAutBCT" : "01/23/2025"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "194",
+          "NbrEcritures" : "3",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST***********************************ING",
+            "Prenom" : "ST***********************************ING",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST*************************************ING"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "USD",
+            "DateOuvCpte" : "09/11/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10199_BZ.1086",
+            "DateAutBCT" : "11/05/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "11/06/2024",
+              "TypeOp" : "0999",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT24310QD0Q8"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10199_BZ.1086",
+              "DateAutBCT" : "11/05/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "188",
+          "NbrEcritures" : "84",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "CO**NAL",
+            "Prenom" : "CO**NAL",
+            "Nationalite" : "TN",
+            "RaisSociale" : "CO**NAL"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "04/13/2015",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "11299_BZ.1086",
+            "DateAutBCT" : "05/03/2023"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "05/03/2023",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT23123S6C2Q"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "11299_BZ.1086",
+              "DateAutBCT" : "05/03/2023"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "070",
+          "NbrEcritures" : "154",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "MA******************************NAT",
+            "Prenom" : "MA******************************NAT",
+            "Nationalite" : "TN",
+            "RaisSociale" : "MA******************************NAT"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "09/19/2022",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "13486_BZ.1744",
+            "DateAutBCT" : "10/10/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "10/10/2024",
+              "TypeOp" : "0122",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT24284D58ZJ"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "13486_BZ.1744",
+              "DateAutBCT" : "10/10/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "188",
+          "NbrEcritures" : "196",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "CO**NAL",
+            "Prenom" : "CO**NAL",
+            "Nationalite" : "TN",
+            "RaisSociale" : "CO**NAL"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "USD",
+            "DateOuvCpte" : "10/09/2018",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10170_BZ.1086",
+            "DateAutBCT" : "10/23/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "10/23/2024",
+              "TypeOp" : "0990",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT242976QKX9"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10170_BZ.1086",
+              "DateAutBCT" : "10/23/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "004",
+          "NbrEcritures" : "12",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST*******************NAL",
+            "Prenom" : "ST*******************NAL",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST*******************NAL"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "02/15/2023",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "15754_BZ.1086",
+            "DateAutBCT" : "02/04/2025"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "02/04/2025",
+              "TypeOp" : "0990",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT25035H2577"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "15754_BZ.1086",
+              "DateAutBCT" : "02/04/2025"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "039",
+          "NbrEcritures" : "64",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST*************************ITS",
+            "Prenom" : "ST*************************ITS",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST*************************ITS"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "USD",
+            "DateOuvCpte" : "04/06/2021",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10250_BZ.1086",
+            "DateAutBCT" : "01/22/2025"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "01/24/2025",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "4",
+              "NumMsgeSwiftMvt" : "FT250229455L"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10250_BZ.1086",
+              "DateAutBCT" : "01/22/2025"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "146",
+          "NbrEcritures" : "6",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "IT************************ING",
+            "Prenom" : "IT************************ING",
+            "Nationalite" : "TN",
+            "RaisSociale" : "IN*************************ING"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "03/07/2022",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "10650_BZ.1086",
+            "DateAutBCT" : "01/08/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "01/09/2024",
+              "TypeOp" : "0121",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT240057CQ5F"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10650_BZ.1086",
+              "DateAutBCT" : "01/08/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "141",
+          "NbrEcritures" : "80",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST********************************NAL",
+            "Prenom" : "ST********************************NAL",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST********************************NAL"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "EUR",
+            "DateOuvCpte" : "03/17/2023",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "11892_BZ.1086",
+            "DateAutBCT" : "08/27/2024"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "08/27/2024",
+              "TypeOp" : "0122",
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT242401LZST"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "11892_BZ.1086",
+              "DateAutBCT" : "08/27/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "070",
+          "NbrEcritures" : "105",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST****************SIE",
+            "Prenom" : "ST****************SIE",
+            "Nationalite" : "TN",
+            "RaisSociale" : "ST****************SIE"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DeviseCpte" : "USD",
+            "DateOuvCpte" : "03/27/2023",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null,
+            "NumAutBCT" : "15605_BZ.1086",
+            "DateAutBCT" : "01/28/2025"
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "NomFourniClient" : null,
+            "DenomBenif" : null,
+            "Pays" : "TN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateMvt" : "01/28/2025",
+              "TypeOp" : null,
+              "NatOp" : null,
+              "CodMvt" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT250285SHT3"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "15605_BZ.1086",
+              "DateAutBCT" : "01/28/2025"
+            }
+          }
+        } ]
+      }
+    } ]
+  }
+}

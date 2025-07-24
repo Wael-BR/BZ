@@ -1,0 +1,381 @@
+{
+  "Document" : {
+    "EnteteDoc" : {
+      "CodeIAT" : "25",
+      "DateDec" : "12/07/2025",
+      "CodeAnnexe" : "CRS-007",
+      "AnneDec" : "2025",
+      "PeriodDec" : "082024"
+    },
+    "Extraits" : [ {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "080",
+          "NbrEcritures" : "84",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "22*****77",
+            "Nom" : "DA********ONI",
+            "Prenom" : "DA********ONI",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "08/19/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "08/27/2024",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT24240LXYYR"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10807_BZ.1086",
+              "DateAutBCT" : "08/27/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "080",
+          "NbrEcritures" : "30",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "20*****07",
+            "Nom" : "AR******************EDE",
+            "Prenom" : "AR******************EDE",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "09/06/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "01/08/2025",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT25008D2RGT"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10311_BZ.1086",
+              "DateAutBCT" : "01/08/2025"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "080",
+          "NbrEcritures" : "70",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "22*****15",
+            "Nom" : "FA******BET",
+            "Prenom" : "FA******BET",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "09/06/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "10/18/2024",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : null,
+              "NumMsgeSwiftMvt" : "FT242921T8LF"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10030_BZ.1086",
+              "DateAutBCT" : "10/18/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "080",
+          "NbrEcritures" : "32",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "CH*****C6",
+            "Nom" : "AN******************NER",
+            "Prenom" : "AN******************NER",
+            "Nationalite" : "DE"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "10/11/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "DE",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "10/18/2024",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "2",
+              "NumMsgeSwiftMvt" : "FT24292MHZ5G"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10166_BZ.1086",
+              "DateAutBCT" : "10/18/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "000",
+          "NbrEcritures" : "12",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "23*****58",
+            "Nom" : "LU**********LLI",
+            "Prenom" : "LU**********LLI",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "11/14/2024",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "01/22/2025",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "4",
+              "NumMsgeSwiftMvt" : "FT250227RVRJ"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10243_BZ.1086",
+              "DateAutBCT" : "01/22/2025"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "076",
+          "NbrEcritures" : "24",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "A0****88",
+            "Nom" : "MO*****************MEH",
+            "Prenom" : "MO*****************MEH",
+            "Nationalite" : "PS"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "02/01/2016",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "PS",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "01/26/2024",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "3",
+              "NumMsgeSwiftMvt" : "FT24024B6SHD"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10640_BZ.1086",
+              "DateAutBCT" : "01/26/2024"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "052",
+          "NbrEcritures" : "26",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "15*****41",
+            "Nom" : "FR***************RT",
+            "Prenom" : "FR***************RT",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "04/08/2016",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "04/05/2023",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "3",
+              "NumMsgeSwiftMvt" : "FT230949JY87"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "11128_BZ.1086",
+              "DateAutBCT" : "04/04/2023"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "004",
+          "NbrEcritures" : "208",
+          "Titulaire" : {
+            "TypeIdentifiant" : "S",
+            "CodeIdentifiant" : "000061812",
+            "Nom" : "SU*********URI",
+            "Prenom" : "SU*********URI",
+            "Nationalite" : "IN"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "07/13/2017",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "IN",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "05/17/2023",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "4",
+              "NumMsgeSwiftMvt" : "FT231371JNDW"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10293_BZ.1086",
+              "DateAutBCT" : "05/17/2023"
+            }
+          }
+        } ]
+      }
+    }, {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "100",
+          "NbrEcritures" : "260",
+          "Titulaire" : {
+            "TypeIdentifiant" : "P",
+            "CodeIdentifiant" : "C7*****6Y",
+            "Nom" : "KA***********BEN",
+            "Prenom" : "KA***********BEN",
+            "Nationalite" : "DE"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "07/24/2020",
+            "EtatCpte" : "2",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "DE",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "DateRetVoy" : null,
+              "DateMvt" : "06/16/2023",
+              "CodMvt" : null,
+              "NatOp" : null,
+              "ModReg" : "1",
+              "NumMsgeSwiftMvt" : "FT23167VFK5W"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10133_BZ.1744",
+              "DateAutBCT" : "06/16/2023"
+            }
+          }
+        } ]
+      }
+    } ]
+  }
+}

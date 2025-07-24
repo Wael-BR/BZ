@@ -1,0 +1,53 @@
+{
+  "Document" : {
+    "EnteteDoc" : {
+      "CodeIAT" : "25",
+      "DateDec" : "12/07/2025",
+      "CodeAnnexe" : "CRS-007",
+      "PeriodDec" : "052024"
+    },
+    "Extraits" : [ {
+      "Extrait" : {
+        "Entete" : {
+          "AgenceDom" : "018",
+          "NbrEcritures" : "6",
+          "Titulaire" : {
+            "TypeTitul" : null,
+            "TypeIdentifiant" : null,
+            "CodeIdentifiant" : null,
+            "Nom" : "ST***********************ING",
+            "Prenom" : "ST***********************ING",
+            "RaisSociale" : "ST***********************ING",
+            "Nationalite" : "FR"
+          },
+          "RefCompte" : {
+            "Rib" : null,
+            "DateOuvCpte" : "04/07/2021",
+            "EtatCpte" : "1",
+            "DateclotureCpte" : null,
+            "DateGelCpte" : null
+          }
+        },
+        "Details" : [ {
+          "Detail" : {
+            "Rib" : null,
+            "DenomBenif" : null,
+            "Pays" : "FR",
+            "RefOperation" : {
+              "NatMvtOp" : "C",
+              "CodMvt" : null,
+              "DateMvt" : "11/24/2023",
+              "NatOp" : null,
+              "ModReg" : "1",
+              "NumMsgeSwiftMvt" : "FT2333160BY8"
+            },
+            "RefAutorisationBct" : {
+              "NumAutBCT" : "10359_BZ.1117",
+              "DateAutBCT" : "11/27/2023"
+            }
+          }
+        } ]
+      }
+    } ]
+  }
+}

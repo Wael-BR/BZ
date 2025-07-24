@@ -23,7 +23,7 @@ public class JsonToXmlController {
     @PostMapping("/upload")
     public String convertAndSaveFromUpload(
             @RequestParam("file") MultipartFile fileName,
-            @RequestParam(defaultValue = "root") String rootElementName,
+            @RequestParam(defaultValue = "") String rootElementName,
             @RequestParam(defaultValue = "uploaded") String outputFileName
     ) throws Exception {
         String jsonContent = new String(fileName.getBytes());

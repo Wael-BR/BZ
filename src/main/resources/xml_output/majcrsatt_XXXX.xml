@@ -7,53 +7,49 @@
           <Details>
             <Detail>
               <RefAutorisationBct>
-                <NumAutBCT>null</NumAutBCT>
-                <DateAutBCT>null</DateAutBCT>
+                <NumAutBCT>10359_BZ.1117</NumAutBCT>
+                <DateAutBCT>11/27/2023</DateAutBCT>
               </RefAutorisationBct>
+              <DenomBenif>null</DenomBenif>
               <RefOperation>
-                <DateMvt>null</DateMvt>
-                <MntOpDin Ccy=""/>
-                <ModReg>null</ModReg>
-                <NatMvtOp>null</NatMvtOp>
-                <MntOpDev Ccy=""/>
+                <DateMvt>11/24/2023</DateMvt>
+                <ModReg>1</ModReg>
+                <NatMvtOp>C</NatMvtOp>
                 <NatOp>null</NatOp>
                 <CodMvt>null</CodMvt>
-                <NumMsgeSwiftMvt>null</NumMsgeSwiftMvt>
+                <NumMsgeSwiftMvt>FT2333160BY8</NumMsgeSwiftMvt>
               </RefOperation>
-              <DenomBenif>null</DenomBenif>
               <Rib>null</Rib>
-              <Pays>null</Pays>
+              <Pays>FR</Pays>
             </Detail>
           </Details>
           <Entete>
             <RefCompte>
               <DateclotureCpte>null</DateclotureCpte>
-              <SoldDebMois Ccy=""/>
               <Rib>null</Rib>
-              <EtatCpte>null</EtatCpte>
+              <EtatCpte>1</EtatCpte>
               <DateGelCpte>null</DateGelCpte>
-              <DateOuvCpte>null</DateOuvCpte>
-              <SoldfinMois Ccy=""/>
+              <DateOuvCpte>04/07/2021</DateOuvCpte>
             </RefCompte>
-            <AgenceDom>null</AgenceDom>
+            <AgenceDom>018</AgenceDom>
+            <NbrEcritures>6</NbrEcritures>
             <Titulaire>
-              <Prenom>null</Prenom>
+              <Prenom>ST***********************ING</Prenom>
               <TypeIdentifiant>null</TypeIdentifiant>
-              <Nationalite>null</Nationalite>
+              <Nationalite>FR</Nationalite>
               <TypeTitul>null</TypeTitul>
               <CodeIdentifiant>null</CodeIdentifiant>
-              <Nom>null</Nom>
-              <RaisSociale>null</RaisSociale>
+              <Nom>ST***********************ING</Nom>
+              <RaisSociale>ST***********************ING</RaisSociale>
             </Titulaire>
-            <NbrEcritures>null</NbrEcritures>
           </Entete>
         </Extrait>
       </Extraits>
       <EnteteDoc>
-        <CodeAnnexe>null</CodeAnnexe>
-        <CodeIAT>null</CodeIAT>
-        <PeriodDec>null</PeriodDec>
-        <DateDec>null</DateDec>
+        <CodeAnnexe>CRS-007</CodeAnnexe>
+        <CodeIAT>25</CodeIAT>
+        <PeriodDec>052024</PeriodDec>
+        <DateDec>12/07/2025</DateDec>
       </EnteteDoc>
     </Document>
   </root>

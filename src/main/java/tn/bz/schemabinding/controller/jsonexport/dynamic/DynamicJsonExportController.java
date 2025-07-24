@@ -24,7 +24,6 @@ public class DynamicJsonExportController {
         }
     }
 
-
     /*** follow the json structure kima kenou ***/
     @GetMapping("/json-structured")
     public ResponseEntity<?> exportStructuredJson(@RequestParam String table) {
@@ -38,4 +37,22 @@ public class DynamicJsonExportController {
         }
     }
 
+    /**
+     * Save the structured JSON to file under src/main/resources/ssms_to_json/{table}.json
+     */
+    @PostMapping("/json-structured/save")
+    public ResponseEntity<?> saveStructuredJsonToFile(@RequestParam String table) {
+        try {
+            List<Map<String, Object>> rows = service.fetchTableData(table);
+            if (rows.isEmpty()) return ResponseEntity.noContent().build();
+
+            Map<String, Object> json = service.convertToStructuredJson(rows);
+            service.exportJsonToFile(json, table);
+
+            String fileName = table.substring(table.lastIndexOf('.') + 1) + ".json";
+            return ResponseEntity.ok("✅ JSON exported to src/main/resources/ssms_to_json/" + fileName);
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error saving JSON: " + e.getMessage());
+        }
+    }
 }

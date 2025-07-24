@@ -1,13 +1,15 @@
 package tn.bz.schemabinding.service.jsonexport.dynamic;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
 
 @Service
 public class DynamicJsonExportService {
@@ -18,8 +20,6 @@ public class DynamicJsonExportService {
     public List<Map<String, Object>> fetchTableData(String tableName) {
         return jdbcTemplate.queryForList("SELECT * FROM " + tableName);
     }
-
-
 
     /*** follow the json structure kima kenou ***/
     public Map<String, Object> convertToStructuredJson(List<Map<String, Object>> flatRows) {
@@ -71,4 +71,29 @@ public class DynamicJsonExportService {
         return result;
     }
 
+
+    /**
+     * Export given JSON data as pretty-printed file under
+     * src/main/resources/ssms_to_json/{tableName}.json
+     *
+     * @param jsonData the structured JSON Map
+     * @param fullTableName e.g. "spring.dbo.majcrsatt"
+     * @throws Exception if file write fails
+     */
+    public void exportJsonToFile(Map<String, Object> jsonData, String fullTableName) throws Exception {
+        String[] parts = fullTableName.split("\\.");
+        String fileName = parts[parts.length - 1] + ".json";  // e.g. majcrsatt.json
+        String dirPath = "src/main/resources/ssms_to_json";
+
+        // Ensure directory exists
+        Files.createDirectories(Paths.get(dirPath));
+
+        File outputFile = new File(dirPath, fileName);
+
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.enable(SerializationFeature.INDENT_OUTPUT);
+        mapper.writeValue(outputFile, jsonData);
+
+        System.out.println("✅ JSON exported to: " + outputFile.getAbsolutePath());
+    }
 }
