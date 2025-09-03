@@ -77,18 +77,18 @@
         </dependency>
 
         <!-- ********************************************* JSON TO XML ***********************************************-->
-         <!-- Jackson for JSON parsing -->
-         <dependency>
-             <groupId>com.fasterxml.jackson.core</groupId>
-             <artifactId>jackson-databind</artifactId>
-             <version>2.17.0</version>
-         </dependency>
+        <!-- Jackson for JSON parsing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.17.0</version>
+        </dependency>
 
-         <dependency>
-             <groupId>org.json</groupId>
-             <artifactId>json</artifactId>
-             <version>20240303</version>
-         </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
 
         <!-- ********************************************* JSON TO JAVA CLASSES ***********************************************-->
 
@@ -132,6 +132,17 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>6.3.2</version> <!-- align with your Spring Security version -->
+        </dependency>
+
 
 
     </dependencies>
@@ -263,5 +274,5 @@
 </project>
 <!-- ******************************************************
      Generated from pom.mustache template
-     Last modified: 2025-05-29 19:58:45
+     Last modified: 2025-08-30 20:11:56
 ****************************************************** -->
