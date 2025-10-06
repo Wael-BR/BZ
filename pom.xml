@@ -132,16 +132,16 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
+        <!--<dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>6.3.2</version> <!-- align with your Spring Security version -->
-        </dependency>
+          <groupId>org.springframework.security</groupId>
+          <artifactId>spring-security-config</artifactId>
+          <version>6.3.2</version>
+        </dependency>-->
 
 
 
@@ -274,5 +274,5 @@
 </project>
 <!-- ******************************************************
      Generated from pom.mustache template
-     Last modified: 2025-08-30 20:11:56
+     Last modified: 2025-10-06 12:59:34
 ****************************************************** -->

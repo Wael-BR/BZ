@@ -16,6 +16,7 @@ public class SchemaController {
     private SchemaService schemaService;
 
     @GetMapping("/classes")
+    @CrossOrigin(origins = "*")
     public Set<String> listAvailableClasses() {
         return schemaService.listAvailableClasses();
     }
